@@ -19,7 +19,7 @@ def main():
             print("Введите слово на английском")
     # создаём БД
     db.create_database(db_name)
-    # создаём таблицы в БД
+    # создаём таблицы в БД.
     db.create_table(create_tables)
     # заполняем таблицы
     db.insert_data_to_table(JSON_FILE_NAME, insert_to_employers, insert_to_vacancies)
@@ -28,5 +28,5 @@ def main():
     user_interaction(db)
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     main()
