@@ -32,11 +32,10 @@ class HeadHunter:
         common_list_vacancies = []
         for employer_id in employers:
             params = {
-                'area': self.vacancy_area,
                 'employer_id': employer_id,
                 'per_page': self.per_page
             }
-            response = requests.get(self._base_url, params=params)
+            response = requests.get(f'https://api.hh.ru/vacancies', params=params)
             if response.status_code == 200:
                 vacancies = response.json()['items']
 
