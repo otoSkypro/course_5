@@ -28,5 +28,5 @@ def main():
     user_interaction(db)
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     main()
