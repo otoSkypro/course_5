@@ -6,9 +6,11 @@ def user_interaction(db_manager):
     Функция для вывода запросов к БД
     :param db_manager: экземпляр класса для работы с БД
     """
-    choice_one = input('Показать всех работодателей и количество вакансий от каждого? (1 - да): ')
+    choice_one = input('Показать всех работодателей и количество вакансий от каждого? (1 - да), (2 - нет): ')
     if choice_one == '1':
         list_employers_and_vacancies_count = db_manager.get_companies_and_vacancies_count(get_all_employers_query)
+    else:
+        continue
         for one_employer in list_employers_and_vacancies_count:
             print(f'Получено {one_employer[1]} вакансий от работодателя {one_employer[0]}')
     else:
